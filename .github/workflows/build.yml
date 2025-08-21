@@ -23,7 +23,8 @@ jobs:
       run: ./gradlew assembleRelease
 
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2    # 将这里的 v3 改为 v2
       with:
         name: app-release
         path: app/build/outputs/apk/release/*.apk
+
